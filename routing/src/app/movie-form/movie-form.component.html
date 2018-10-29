@@ -1,0 +1,12 @@
+<p>
+  movie-form works!
+</p>
+<form>
+  imdbId<input type="text" #id><br>
+  movieTitle<input type="text" #title><br>
+  yearofrelease<input type="text" #year><br>
+  rating<input type="number" #rating><br>
+  poster url<input type="text" #url><br>
+  comment<input type="text" #comment><br>
+</form>
+<button  (click)="saveMovie(id.value,title.value,year.value,rating.value,url.value,comment.value)">submit</button>

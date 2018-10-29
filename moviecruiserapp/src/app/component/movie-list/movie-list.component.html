@@ -1,0 +1,14 @@
+<p>
+  movie-list works!
+</p>
+<ul>
+  <li *ngFor="let movie of moviesMatching" >
+      <app-movie-card [parentData]=movie></app-movie-card><br>
+      rating<input type="number" step=0.01 min=0 max=5 #rating><br>
+      comment<input type="text" #comment><br>
+      <button  (click)="saveMovie(movie.imdbID,movie.Title,movie.Year,rating.value,movie.Poster,comment.value)">Add to wishlist</button>
+  </li>
+</ul>
+
+
+

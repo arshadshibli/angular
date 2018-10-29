@@ -1,0 +1,9 @@
+<p>
+  wish-card works!
+</p>
+{{movie.imdbId+"  "+movie.movieTitle}}
+<img src={{movie.posterUrl}} onerror="this.src='http://2.bp.blogspot.com/-1Z56XqW7WLU/Uxy1Te7gsRI/AAAAAAAABns/TDROk0EaWvg/s1600/This-Image-Is-Not-Available-In-Your-Country.jpg'">
+
+    <button (click)="deleteMovie(movie.imdbId)">Delete</button>
+    <input #comment type="text" value={{movie.comment}}>
+    <button (click)="updateMovie(movie.imdbId,comment.value)">update</button>

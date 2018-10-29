@@ -1,0 +1,6 @@
+<nav>
+  <input #search type="text" placeholder="search by title">
+  <a (click)="getMovies(search.value)" routerLinkActive="active"><button>search</button></a>
+  <a routerLink="/wishList"  routerLinkActive="active"><button>wishList</button></a>
+</nav>
+<router-outlet></router-outlet>

@@ -1,0 +1,21 @@
+<p>
+  movie-list works!
+</p>
+<ul>
+  <li *ngFor="let movie of movies">
+    {{movie.imdbId+"  "+movie.movieTitle}}
+    <button (click)="deleteMovie(movie.imdbId)">Delete</button>
+    <input #comment type="text" value={{movie.comment}}>
+    <button (click)="updateMovie(movie.imdbId,comment.value)">update</button>
+    <img src={{movie.posterUrl}}>
+  </li>
+</ul>
+<!-- <button (click)="saveMovie()">save movie</button> -->
+<button (click)="addNewMovie()">add new Movie</button><br>
+<input placeholder="imdbId" type="text" #id>
+<input placeholder="comment" type="text" #comment>
+<button (click)="deleteMovie(id.value)">Delete Movie</button>
+<button (click)="updateMovie(id.value,comment.value)">updatee Movie</button>
+<input type="text" #title>
+<button (click)="getMovie(title.value)">get Movie</button>
+<button (click)="searchMovie(title.value)">search</button>
